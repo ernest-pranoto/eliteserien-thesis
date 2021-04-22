@@ -1,0 +1,108 @@
+const MatchData = [
+    {
+        id: 1,
+        season : '2020',
+        date : '22 des 2020',
+        time : '18.00',
+        home : 'Brann',
+        away : 'Odd',
+        homeLogo : '/clublogos/Brann.png',
+        awayLogo : '/clublogos/Odd.png',
+        homeScore : '2',
+        awayScore : '1',
+        stadium : 'Brann Stadion'
+    },
+    {
+        id: 2,
+        season : '2020',
+        date : '22 des 2020',
+        time : '18.00',
+        home : 'Vålerenga',
+        away : 'Start',
+        homeLogo : '/clublogos/Valerenga.png',
+        awayLogo : '/clublogos/Start.png',
+        homeScore : '4',
+        awayScore : '0',
+        stadium : 'Intility Arena'
+    },
+    {
+        id: 3,
+        season : '2020',
+        date : '22 des 2020',
+        time : '18.00',
+        home : 'Strømsgodset',
+        away : 'Stabæk',
+        homeLogo : '/clublogos/Stromsgodset.png',
+        awayLogo : '/clublogos/Stabekk.png',
+        homeScore : '0',
+        awayScore : '4',
+        stadium : 'Marienlyst Stadion'
+    },
+    {
+        id: 4,
+        season : '2020',
+        date : '22 des 2020',
+        time : '18.00',
+        home : 'Mjøndalen',
+        away : 'Aalesund',
+        homeLogo : '/clublogos/Mjondalen.png',
+        awayLogo : '/clublogos/Aalesund.png',
+        homeScore : '3',
+        awayScore : '0',
+        stadium : 'Consto Arena'
+    },
+    {
+        id: 5,
+        season : '2020',
+        date : '22 des 2020',
+        time : '18.00',
+        home : 'Sandefjord Fotball',
+        away : 'Rosenborg',
+        homeLogo : '/clublogos/Sandefjord.png',
+        awayLogo : '/clublogos/Tromso.png',
+        homeScore : '0',
+        awayScore : '0',
+        stadium : 'Sandefjord Arena'
+    },
+    {
+        id: 6,
+        season : '2020',
+        date : '22 des 2020',
+        time : '18.00',
+        home : 'Kristiansund',
+        away : 'Haugesund',
+        homeLogo : '/clublogos/Kristiansund.png',
+        awayLogo : '/clublogos/Haugesund.png',
+        homeScore : '1',
+        awayScore : '3',
+        stadium : 'Kristiansund Stadion'
+    },
+    {
+        id: 7,
+        season : '2020',
+        date : '19 des 2020',
+        time : '18.00',
+        home : 'Bodø/Glimt',
+        away : 'Viking',
+        homeLogo : '/clublogos/BodoGlimt.png',
+        awayLogo : '/clublogos/Viking.png',
+        homeScore : '3',
+        awayScore : '0',
+        stadium : 'Aspmyra Stadion'
+    },
+    {
+        id: 8,
+        season : '2020',
+        date : '19 des 2020',
+        time : '15.30',
+        home : 'Molde',
+        away : 'Sarpsborg 08',
+        homeLogo : '/clublogos/Molde.png',
+        awayLogo : '/clublogos/Sarpsborg08.png',
+        homeScore : '5',
+        awayScore : '0',
+        stadium : 'Aker Stadion'
+    },
+];
+
+export default MatchData;

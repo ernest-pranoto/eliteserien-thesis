@@ -1,0 +1,102 @@
+.schedule {
+  background: white;
+  width: 100.2vw;
+  overflow-x: auto;
+}
+
+.schedule::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.single-schedule {
+  position: relative;
+  width: 161px;
+  border: solid 1px lightgrey;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.schedule,
+.sc-home,
+.sc-away,
+.sc-date-time,
+.sc-home-team,
+.sc-away-team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message p {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.sc-club-logo {
+  width: 20px;
+  margin: 2px 7px 0 3px;
+}
+
+.sc-home,
+.sc-away {
+  min-width: 110px;
+}
+
+.sc-home p,
+.sc-away p {
+  font-size: 12px;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+.sc-date,
+.sc-time,
+.sc-score {
+  margin: 0 5px;
+  font-size: 10px;
+}
+
+.schedule a,
+.schedule a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.sc-time {
+  color: #0080a7;
+}
+
+/*============ 
+hover effects 
+============*/
+
+.single-schedule:hover > .sc-date-time,
+.single-schedule:hover > .sc-home,
+.single-schedule:hover > .sc-away {
+  visibility: hidden;
+}
+
+.single-schedule:hover > .message p {
+  visibility: visible;
+}
+
+/*============ 
+mobile version 
+============*/
+@media screen and (max-width: 750px) {
+  .sc-home p,
+  .sc-away p {
+    font-size: 9px;
+  }
+  .sc-date,
+  .sc-time {
+    font-size: 8px;
+    margin: 0;
+  }
+  .message p {
+    font-size: 8px;
+  }
+}

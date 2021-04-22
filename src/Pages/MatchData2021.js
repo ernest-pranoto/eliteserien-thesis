@@ -1,0 +1,108 @@
+const MatchData = [
+    {
+        id: 1,
+        season : '2021',
+        date : '09 May 21',
+        time : '18.00',
+        home : 'Molde',
+        away : 'Kristiansund',
+        homeLogo : '/clublogos/Molde.png',
+        awayLogo : '/clublogos/Kristiansund.png',
+        homeScore : '-',
+        awayScore : '-',
+        stadium : 'Aker Stadion'
+    },
+    {
+        id: 2,
+        season : '2021',
+        date : '09 May 21',
+        time : '18.00',
+        home : 'Bodø/Glimt',
+        away : 'Tromsø',
+        homeLogo : '/clublogos/BodoGlimt.png',
+        awayLogo : '/clublogos/Tromso.png',
+        homeScore : '-',
+        awayScore : '-',
+        stadium : 'Aspmyra Stadion'
+    },
+    {
+        id: 3,
+        season : '2021',
+        date : '09 May 21',
+        time : '18.00',
+        home : 'Viking',
+        away : 'Brann',
+        homeLogo : '/clublogos/Viking.png',
+        awayLogo : '/clublogos/Brann.png',
+        homeScore : '-',
+        awayScore : '-',
+        stadium : 'SR-Bank Arena'
+    },
+    {
+        id: 4,
+        season : '2021',
+        date : '09 May 21',
+        time : '20.00',
+        home : 'Vålerenga',
+        away : 'Rosenborg',
+        homeLogo : '/clublogos/Valerenga.png',
+        awayLogo : '/clublogos/Rosenborg.png',
+        homeScore : '-',
+        awayScore : '-',
+        stadium : 'Intility Arena'
+    },
+    {
+        id: 5,
+        season : '2021',
+        date : '21 Jul 21',
+        time : '19.00',
+        home : 'Strømgodset',
+        away : 'Odd',
+        homeLogo : '/clublogos/Stromsgodset.png',
+        awayLogo : '/clublogos/Odd.png',
+        homeScore : '-',
+        awayScore : '-',
+        stadium : 'Marienlyst Stadion'
+    },
+    {
+        id: 6,
+        season : '2021',
+        date : '21 Jul 21',
+        time : '19.00',
+        home : 'Sandefjord Fb',
+        away : 'Haugesund',
+        homeLogo : '/clublogos/Sandefjord.png',
+        awayLogo : '/clublogos/Haugesund.png',
+        homeScore : '-',
+        awayScore : '-',
+        stadium : 'Sandefjord Arena'
+    },
+    {
+        id: 7,
+        season : '2021',
+        date : '21 Jul 21',
+        time : '19.00',
+        home : 'Stabæk',
+        away : 'Lillestrøm',
+        homeLogo : '/clublogos/Stabekk.png',
+        awayLogo : '/clublogos/Lillestrom.png',
+        homeScore : '-',
+        awayScore : '-',
+        stadium : 'Nadderud Stadion'
+    },
+    {
+        id: 8,
+        season : '2021',
+        date : '21 Jul 21',
+        time : '19.00',
+        home : 'Sarpsborg 08',
+        away : 'Mjøndalen',
+        homeLogo : '/clublogos/Sarpsborg08.png',
+        awayLogo : '/clublogos/Mjondalen.png',
+        homeScore : '-',
+        awayScore : '-',
+        stadium : 'Sarpsborg st KG'
+    },
+];
+
+export default MatchData;

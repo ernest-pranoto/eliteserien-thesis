@@ -1,0 +1,89 @@
+.header,
+.main-logo,
+.nav,
+.menubar {
+  display: flex;
+}
+
+.header {
+  width: 100vw;
+  margin: auto;
+  background-color: #10253e;
+  border-bottom: 5px solid #00a9e0;
+  align-items: center;
+  font-family: "Anton", sans-serif;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.main-logo {
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.nav {
+  align-items: center;
+  flex: 3;
+}
+
+.menubar {
+  justify-content: flex-start;
+  color: white;
+  font-size: 25px;
+  flex: 3;
+  visibility: hidden;
+}
+
+.main-logo img {
+  height: 55px;
+  margin: 5px 15px;
+}
+
+.header-text-1,
+.header-text-2,
+.eliteserien {
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: "Anton", sans-serif;
+  margin: auto 30px;
+}
+
+.eliteserien {
+  background: #00081c;
+  border: 1.5px solid #00a9e0;
+  border-radius: 5px;
+  padding: 10px 17px;
+  margin-left: 7px;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    margin-bottom: 5px;
+  }
+  .header img {
+    height: 30px;
+  }
+
+  .arrow,
+  .nav {
+    visibility: hidden;
+  }
+
+  .header-text-1,
+  .header-text-2,
+  .eliteserien {
+    font-size: 5px;
+    margin: 5px;
+  }
+
+  .menubar {
+    visibility: visible;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+}

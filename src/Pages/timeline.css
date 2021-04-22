@@ -1,0 +1,254 @@
+:root {
+  --light-blue: #0080a7;
+  --bright-blue: #00a1c6;
+  --dark-blue: #10253e;
+}
+
+.main-timeline {
+  margin-top: 10px;
+}
+
+.center-line {
+  content: "";
+  position: absolute;
+  background: rgb(83, 83, 83);
+  width: 1px;
+  height: 140%;
+  right: -23px;
+  transform: translateX(-50%);
+}
+
+.timeline-home a,
+.timeline-away a,
+.home-goal a,
+.away-goal a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: calc(50% - 140px);
+  justify-content: space-between;
+  margin: 12px 0px 12px 120px;
+  padding: 5px 0;
+  background-color: white;
+  border: 1px solid rgb(154, 154, 158);
+  border-radius: 5px;
+  z-index: 0;
+}
+
+.timeline-content {
+  display: block;
+  text-align: right;
+  width: 370px;
+}
+
+.timeline-time {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid rgb(83, 83, 83);
+  border-radius: 50%;
+  right: -36px;
+}
+
+.event-name,
+.event-player-name,
+.event-name-goal {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.event-name {
+  color: var(--light-blue);
+  font-weight: bold;
+}
+
+.far {
+  visibility: hidden;
+}
+
+/* away position adjustment */
+.timeline-away a,
+.away-goal a {
+  left: 50%;
+  margin: 15px 120px 15px 20px;
+}
+
+.timeline-away .center-line,
+.away-goal .center-line {
+  left: -20px;
+}
+
+.timeline-away .timeline-time,
+.away-goal .timeline-time {
+  left: -35px;
+}
+
+.timeline-away .timeline-content,
+.away-goal .timeline-content {
+  text-align: left;
+}
+
+.timeline-home img,
+.timeline-away img,
+.home-goal img,
+.away-goal img {
+  height: 25px;
+  margin: 0 10px;
+}
+
+/* goal adjustment */
+.home-goal a {
+  background-color: yellow;
+}
+
+.home-goal .event-name {
+  color: black;
+}
+
+.away-goal a {
+  background-color: rgb(116, 5, 5);
+}
+
+.away-goal .event-player-name,
+.away-goal .event-name {
+  color: rgb(230, 183, 140);
+}
+
+.home-goal .event-name,
+.away-goal .event-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.timeline a {
+  color: black;
+  text-decoration: none;
+}
+
+.far {
+  font-size: 25px;
+  margin: 0 10px;
+}
+
+/* hover effects */
+.timeline-home a:hover,
+.timeline-away a:hover,
+.home-goal a:hover,
+.away-goal a:hover {
+  background: var(--bright-blue);
+}
+
+.timeline-home a:hover > .timeline-content > .event-name,
+.timeline-home a:hover > .timeline-content > .event-player-name,
+.timeline-away a:hover > .timeline-content > .event-name,
+.timeline-away a:hover > .timeline-content > .event-player-name,
+.home-goal a:hover > .timeline-content > .event-player-name,
+.home-goal a:hover > .timeline-content > .event-name,
+.away-goal a:hover > .timeline-content > .event-player-name,
+.away-goal a:hover > .timeline-content > .event-name {
+  color: white;
+}
+
+.timeline-home a:hover .far,
+.timeline-away a:hover .far,
+.home-goal a:hover .far,
+.away-goal a:hover .far {
+  visibility: visible;
+}
+
+/* mobile version */
+@media screen and (max-width: 720px) {
+  .center-line {
+    height: 138%;
+    left: -30px;
+    transform: translateX(-50%);
+  }
+
+  .timeline-home {
+    position: relative;
+  }
+
+  .timeline-home a,
+  .timeline-away a,
+  .home-goal a,
+  .away-goal a {
+    width: 85%;
+    margin-left: 50px;
+    padding: 10px 0;
+  }
+
+  .timeline-time {
+    left: -45px;
+  }
+
+  .timeline-content {
+    text-align: left;
+    height: auto;
+    width: 250px;
+  }
+
+  .timeline-home .timeline-content,
+  .home-goal .timeline-content {
+    position: absolute;
+    transform: translateX(45px);
+  }
+
+  .timeline-home .action,
+  .home-goal .action {
+    position: absolute;
+    transform: translateX(0%);
+  }
+
+  .timeline-home .timeline-club-logo .home-logo .timeline-club-logo {
+    position: inherit;
+    transform: translateX(0%);
+  }
+
+  .timeline-home:hover .far,
+  .timeline-away:hover .far {
+    visibility: hidden;
+  }
+
+  .timeline-away a,
+  .away-goal a {
+    left: 0%;
+    margin: 5px 0px 15px 50px;
+    height: 45px;
+  }
+
+  .timeline-away .center-line,
+  .away-goal .center-line {
+    left: -30px;
+  }
+
+  .timeline-away .timeline-time,
+  .away-goal .timeline-time {
+    left: -45px;
+  }
+
+  .timeline-away .timeline-club-logo,
+  .away-goal .timeline-club-logo {
+    position: inherit;
+    transform: translateX(250%);
+    margin-right: 35px;
+  }
+
+  .home-goal .action,
+  .away-goal .action {
+    margin-left: -5px;
+  }
+
+  .home a:before,
+  .away a:before,
+  .home a:after,
+  .away a:after {
+    visibility: hidden;
+  }
+}

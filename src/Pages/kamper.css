@@ -1,0 +1,234 @@
+:root {
+  --light-blue: #0080a7;
+  --bright-blue: #00a1c6;
+  --dark-blue: #10253e;
+}
+
+.header,
+.round,
+.season,
+.calendar,
+.calendar a,
+.single-match,
+.date-time,
+.scoreboard,
+.stadium-name,
+.final-score,
+.home-team,
+.away-team,
+.hometeam {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.round,
+.scoreboard,
+.final-score,
+.calendar,
+.home-team,
+.arrow {
+  justify-content: center;
+}
+
+/*====
+match 
+=====*/
+.round {
+  font-weight: bold;
+  width: 100px;
+  height: 35px;
+  margin: 10px 120px;
+  background-color: var(--dark-blue);
+  color: white;
+  border-radius: 5px;
+  border-bottom: 2px solid #00a9e0;
+  border-left: 2px solid #00a9e0;
+}
+
+.single-match {
+  background: white;
+  width: 80vw;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 5px;
+  border-bottom: 2px solid #00a9e0;
+}
+
+.date-time {
+  margin-left: 25px;
+  width: 240px;
+}
+
+.scoreboard {
+  width: 500px;
+  height: 40px;
+}
+
+.stadium-name {
+  width: 200px;
+  padding-left: 50px auto;
+  font-size: 12px;
+  color: rgb(68, 68, 68);
+}
+
+.date {
+  width: 100px;
+  font-size: 12px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.time {
+  text-align: center;
+  color: var(--light-blue);
+  width: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  flex: 1;
+}
+
+.team-logo {
+  height: 27px;
+  margin: auto 10px;
+}
+
+.final-score {
+  margin: 0 15px;
+  height: 30px;
+  width: 60px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--dark-blue);
+}
+
+.home-team,
+.away-team {
+  width: 200px;
+  height: 40px;
+  font-size: 14px;
+  color: black;
+}
+
+.home-team {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.arrow {
+  display: flex;
+  margin-right: 20px;
+}
+
+.container a,
+.season a {
+  color: black;
+  text-decoration: none;
+}
+
+/*=========
+Sesong
+===========*/
+.calendar {
+  border: 2px solid var(--dark-blue);
+  padding: 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.calendar p {
+  font-size: 12px;
+  padding-left: 2px;
+  padding-top: 2px;
+}
+
+.season {
+  margin: 20px 120px;
+}
+
+/*=========== 
+hover effect
+=============*/
+.single-match:hover,
+.calendar:hover {
+  background-color: var(--bright-blue);
+  color: white;
+}
+
+.single-match:hover > .date-time > .time,
+.single-match:hover > .scoreboard > .home-team,
+.single-match:hover > .scoreboard > .away-team,
+.single-match:hover > .stadium-name,
+.calendar:hover > .calendar p {
+  color: white;
+  font-weight: normal;
+}
+
+.single-match:hover > .arrow {
+  transform: translateX(15px);
+  transition: 0.5s;
+}
+
+/*============
+mobile version
+==============*/
+@media screen and (max-width: 960px) {
+  .single-match {
+    width: 85vw;
+  }
+  .date-time {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .time {
+    text-align: left;
+  }
+  .stadium-name {
+    visibility: hidden;
+    font-size: 1px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .single-match {
+    display: block;
+    width: 95vw;
+    height: 60px;
+    margin-top: 10px;
+  }
+  .round {
+    margin: 0 auto;
+  }
+  .season {
+    margin: 10px 0 -32px 10px;
+    font-size: 12px;
+  }
+  .date-time {
+    display: flex;
+    width: 140px;
+    padding-top: 5px;
+  }
+  .scoreboard {
+    width: 95vw;
+  }
+
+  .team-logo {
+    margin: auto 5px;
+  }
+  .final-score {
+    margin: 0 5px;
+  }
+  .hometeam {
+    max-width: 170px;
+    text-align: right;
+  }
+  .date,
+  .time {
+    text-align: left;
+    font-size: 10px;
+  }
+}

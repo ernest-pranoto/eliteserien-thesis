@@ -1,0 +1,204 @@
+:root {
+  --light-blue: #0080a7;
+  --bright-blue: #00a9e0;
+  --dark-blue: #10253e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.date-place,
+.scoreboard-result,
+.score,
+.home-result,
+.away-result,
+.away-result-plus {
+  display: flex;
+  align-items: center;
+}
+
+.result,
+.scoreboard-result,
+.away-result,
+.score,
+.half-time {
+  justify-content: center;
+}
+
+.date-place,
+.scorer,
+.away1,
+.half-time {
+  display: flex;
+}
+
+.result-main {
+  display: grid;
+  /* grid-template-columns: 1fr;
+  grid-template-rows: 1fr; */
+  grid-template-areas: "overlap";
+  text-transform: capitalize;
+  color: white;
+  margin-top: 10px;
+}
+
+.background {
+  margin: 0 auto;
+  grid-area: overlap;
+}
+
+.background img {
+  width: 80vw;
+}
+
+.result {
+  grid-area: overlap;
+}
+
+.date-place,
+.scorer {
+  margin: 0 auto;
+  width: 70vw;
+  font-size: 12px;
+}
+
+.date-place {
+  background-color: var(--dark-blue);
+  padding: 7px;
+}
+
+.transparent {
+  width: 70vw;
+  height: 10vw;
+  margin: 0 auto;
+}
+
+.scoreboard-result {
+  width: 70vw;
+  margin: 0 auto;
+  height: 70px;
+  /* position: relative; */
+}
+
+.home-result,
+.away-result {
+  background-color: var(--dark-blue);
+  width: 500px;
+  font-size: 14px;
+}
+
+.away-result {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.home-result p,
+.away-result p {
+  font-size: 25px;
+  margin: 0 20px;
+}
+
+.score {
+  background-color: white;
+  height: 70px;
+  width: 120px;
+  position: absolute;
+  font-size: 40px;
+  color: black;
+}
+
+.club-logo {
+  height: 70px;
+  background-color: white;
+  padding: 10px;
+}
+
+.scorer {
+  background-color: #10253eab;
+}
+
+.home-scorer,
+.away-scorer {
+  margin: 30px 30px 10px 30px;
+  width: 450px;
+}
+
+.home-scorer p,
+.away-scorer p {
+  padding: 2px;
+}
+
+.home-scorer {
+  text-align: right;
+}
+
+.away-scorer {
+  text-align: left;
+}
+
+.half-time {
+  margin: 5px 0;
+  width: 140px;
+  font-size: 14px;
+}
+
+.date-time-icon-result {
+  margin: 0 3px 0 10px;
+  font-size: 15px;
+}
+
+/*============ 
+mobile version 
+============*/
+@media screen and (max-width: 750px) {
+  body {
+    background-size: 95vw;
+  }
+  .background img,
+  .date-place,
+  .scorer,
+  .scoreboard-result {
+    width: 95vw;
+  }
+  .date-place,
+  .scorer,
+  .half-time {
+    font-size: 10px;
+  }
+  .scoreboard-result,
+  .club-logo,
+  .score {
+    height: 40px;
+  }
+  .date-place,
+  .scorer {
+    padding: 3px;
+  }
+  .club-logo,
+  .score {
+    padding: 5px;
+  }
+  .home-result p,
+  .away-result p {
+    font-size: 15px;
+    margin: 0 5px;
+  }
+  .score {
+    width: 60px;
+    font-size: 20px;
+  }
+  .home-scorer,
+  .away-scorer {
+    margin: 15px 0 2px 0;
+  }
+  .half-time {
+    margin: 0;
+  }
+  .date-time-icon-result {
+    margin: 0 2px 0 5px;
+    font-size: 12px;
+  }
+}
