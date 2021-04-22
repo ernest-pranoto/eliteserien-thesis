@@ -245,6 +245,10 @@
     margin-left: -5px;
   }
 
+  .far {
+    visibility: hidden;
+  }
+
   .home a:before,
   .away a:before,
   .home a:after,

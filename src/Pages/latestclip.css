@@ -196,6 +196,9 @@ article {
   .next {
     margin-left: 10px;
   }
+  .btn-container {
+    margin-left: 0px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -226,8 +229,5 @@ article {
   .next {
     font-size: 10px;
     margin: 0 10px;
-  }
-  .btn-container {
-    margin-left: 0px;
   }
 }
