@@ -1,0 +1,118 @@
+.most-popular {
+  width: 90vw;
+  max-width: 1296px;
+  background: white;
+  margin: 0 auto;
+  margin-top: 75px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  color: white;
+}
+
+.mp-container,
+.mp-score,
+.mp-score-date {
+  display: flex;
+  align-items: center;
+}
+
+.mp-container {
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.mp-single {
+  margin: 15px;
+  width: 290px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  color: black;
+  text-decoration: none;
+}
+
+.mp-container {
+  overflow-x: auto;
+}
+
+.mp-goal-detail,
+.mp-score,
+.mp-date {
+  margin: 5px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.mp-score-date {
+  justify-content: space-between;
+}
+
+.mp-img {
+  width: 290px;
+  border-radius: 5px;
+}
+
+.mp-logo {
+  width: 20px;
+}
+
+.mp-score-detail {
+  margin: 0 5px;
+}
+
+.mp-title {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #12326e;
+}
+
+.view-all {
+  color: #12326e;
+  text-decoration: none;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.view-all p {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.mp-date {
+  font-size: 12px;
+}
+
+/*=========== 
+hover effect
+=============*/
+.mp-single:hover {
+  /* background-color: #00a1c6; */
+  background: #10253e;
+  color: white;
+}
+
+/*============ 
+mobile version 
+============*/
+@media screen and (max-width: 768px) {
+  .most-popular {
+    width: 100vw;
+    margin-top: 30px;
+  }
+  .mp-single {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .mp-title {
+    margin-top: 5px;
+  }
+  .view-all {
+    text-align: left;
+  }
+  .view-all p {
+    margin: 5px 0 10px 15px;
+  }
+}

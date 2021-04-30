@@ -31,6 +31,7 @@ function LatestClip() {
             const {id, videoimg, homelogo, awaylogo, homegoal, awaygoal, clubscorer, scorer, videosource} = singleClip;
 
         let position = 'nextSlide'
+        let tabIndex = "-1"
 
         if (singleClipIndex === index){
             position = 'activeSlide';
@@ -38,6 +39,10 @@ function LatestClip() {
 
         if (singleClipIndex === index - 1 ||( index === 0 &&singleClipIndex === LatestClipData.length)) {
             position = 'lastSlide';
+        }
+
+        if (position === 'activeSlide') {
+            tabIndex = "0"
         }
 
             return (
@@ -56,14 +61,18 @@ function LatestClip() {
                                     <p className="ci-score">{homegoal} - {awaygoal}</p>
                                     <img src={awaylogo} alt="club logo" className="ci-logo"/>
                                 </div>
-                                <p className="ci-detail">Mål {clubscorer} scoring av</p>
-                                <p className="ci-detail">{scorer}</p>
-                                <div className="watch-btn">
-                                    <a href={videosource} target="_blank" className="clip-button">vis klip</a>
+                                <div className="ci-scorer-detail">
+                                    <p className="ci-detail">Mål {clubscorer} scoring av</p>
+                                    <p className="ci-detail">{scorer}</p>
                                 </div>
-                                <div className="btn-container">
-                                    <button className="prev" onClick= {()=> setIndex (index-1)}><BiLeftArrow/>prev</button>
-                                    <button className="next" onClick= {()=> setIndex (index+1)}>next<BiRightArrow/></button>
+                                <div className="buttons">
+                                    <div className="watch-btn">
+                                        <a href={videosource} target="_blank" className="clip-button" tabIndex={tabIndex} aria-label={`lenke åpnes i ny fane mål ${clubscorer} av ${scorer} vis klip`}>vis klip</a>
+                                    </div>
+                                    <div className="btn-container">
+                                        <button className="prev" onClick= {()=> setIndex (index-1)} tabIndex={tabIndex}><BiLeftArrow/>prev</button>
+                                        <button className="next" onClick= {()=> setIndex (index+1)} tabIndex={tabIndex}>next<BiRightArrow/></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

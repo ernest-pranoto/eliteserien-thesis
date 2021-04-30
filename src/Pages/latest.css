@@ -1,23 +1,27 @@
 .schedule {
   background: white;
-  width: 100.2vw;
+  width: 100vw;
   overflow-x: auto;
+  color: white;
 }
 
-.schedule::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+.schedule-container {
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .single-schedule {
   position: relative;
-  width: 161px;
+  width: 12.5vw;
+  min-width: 148px;
   border: solid 1px lightgrey;
+  color: black;
   padding: 5px;
   cursor: pointer;
 }
 
 .schedule,
+.schedule-container,
 .sc-home,
 .sc-away,
 .sc-date-time,
@@ -75,18 +79,25 @@ hover effects
 
 .single-schedule:hover > .sc-date-time,
 .single-schedule:hover > .sc-home,
-.single-schedule:hover > .sc-away {
+.single-schedule:hover > .sc-away,
+.single-schedule:focus > .sc-date-time,
+.single-schedule:focus > .sc-home,
+.single-schedule:focus > .sc-away {
   visibility: hidden;
 }
 
-.single-schedule:hover > .message p {
+.single-schedule:hover > .message p,
+.single-schedule:focus > .message p {
   visibility: visible;
 }
 
 /*============ 
 mobile version 
 ============*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
+  .single-schedule {
+    width: 125px;
+  }
   .sc-home p,
   .sc-away p {
     font-size: 9px;

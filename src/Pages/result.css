@@ -41,27 +41,33 @@
   grid-template-rows: 1fr; */
   grid-template-areas: "overlap";
   text-transform: capitalize;
-  color: white;
-  margin-top: 10px;
+  color: rgb(220, 220, 220);
+  width: 90vw;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 .background {
-  margin: 0 auto;
   grid-area: overlap;
 }
 
 .background img {
-  width: 80vw;
+  width: 90vw;
+  max-width: 1440px;
 }
 
 .result {
   grid-area: overlap;
+  width: 90vw;
+  max-width: 1440px;
+  color: white;
 }
 
 .date-place,
 .scorer {
   margin: 0 auto;
-  width: 70vw;
+  width: 90%;
   font-size: 12px;
 }
 
@@ -71,13 +77,11 @@
 }
 
 .transparent {
-  width: 70vw;
   height: 10vw;
-  margin: 0 auto;
 }
 
 .scoreboard-result {
-  width: 70vw;
+  width: 90%;
   margin: 0 auto;
   height: 70px;
   /* position: relative; */
@@ -86,7 +90,7 @@
 .home-result,
 .away-result {
   background-color: var(--dark-blue);
-  width: 500px;
+  width: 700px;
   font-size: 14px;
 }
 
@@ -112,18 +116,22 @@
 
 .club-logo {
   height: 70px;
+  width: 70px;
   background-color: white;
   padding: 10px;
 }
 
 .scorer {
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: #10253eab;
 }
 
 .home-scorer,
 .away-scorer {
   margin: 30px 30px 10px 30px;
-  width: 450px;
+  width: 50%;
+  min-width: 150px;
 }
 
 .home-scorer p,
@@ -153,15 +161,42 @@
 /*============ 
 mobile version 
 ============*/
-@media screen and (max-width: 900px) {
-  body {
-    background-size: 95vw;
+@media screen and (max-width: 1024px) {
+  .background img {
+    width: 90vw;
   }
+  .result-main {
+    margin-top: 10px;
+  }
+  .date-place,
+  .scoreboard-result,
+  .scorer {
+    width: 80vw;
+  }
+  .home-result p,
+  .away-result p {
+    font-size: 20px;
+    margin: 0 5px;
+  }
+  .scoreboard-result,
+  .score {
+    height: 50px;
+  }
+  .club-logo {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .background img,
+  .result-main,
+  .result,
   .date-place,
   .scorer,
   .scoreboard-result {
     width: 95vw;
+    margin: 0 auto;
   }
   .date-place,
   .scorer,
@@ -172,6 +207,10 @@ mobile version
   .club-logo,
   .score {
     height: 40px;
+  }
+  .club-logo {
+    height: 40px;
+    width: 40px;
   }
   .date-place,
   .scorer {
@@ -200,5 +239,11 @@ mobile version
   .date-time-icon-result {
     margin: 0 2px 0 5px;
     font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .transparent {
+    height: 145px;
   }
 }

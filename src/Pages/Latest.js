@@ -5,9 +5,11 @@ import MatchData2021 from './MatchData2021';
 function Latest() {
     return (
         <div className="schedule">
-            {MatchData2021.map((singleSchedule) => {
+            <div className="schedule-container">
+                {MatchData2021.map((singleSchedule) => {
                 return <ScheduleList key={singleSchedule.id} {...singleSchedule}></ScheduleList>
             })};
+            </div>
         </div>
     );
 };
@@ -15,7 +17,7 @@ function Latest() {
 const ScheduleList = (scList) => {
     const {date, time, home, away, homeLogo, awayLogo, homeScore, awayScore} = scList
     return (
-        <div className="single-schedule">
+        <div className="single-schedule" tabindex="0" aria-label={`${date} ${time} ${home} mot ${away} ${homeScore} ${awayScore}`}>
             <div className="sc-date-time">
                 <p className="sc-date">{date}</p>
                 <p className="sc-time">{time}</p>

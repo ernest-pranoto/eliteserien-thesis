@@ -49,7 +49,7 @@ const TimelineList = (event) => {
                             <p className={eventname}>{action}</p>
                             <p className="event-player-name">{player}</p>
                         </div>
-                        <img src={clublogo} class="timeline-club-logo" alt={`${clublogo} logo`}/>
+                        <img src={clublogo} className="timeline-club-logo" alt={`${clublogo} logo`}/>
                         <GrCirclePlay className="far"/>
                     </a>
                 </div>

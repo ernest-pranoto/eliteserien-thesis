@@ -1,4 +1,5 @@
 .header,
+.header-container,
 .main-logo,
 .nav,
 .menubar {
@@ -7,13 +8,19 @@
 
 .header {
   width: 100vw;
-  margin: auto;
+  margin: 0 auto;
   background-color: #10253e;
   border-bottom: 5px solid #00a9e0;
   align-items: center;
   font-family: "Anton", sans-serif;
   font-size: 14px;
   text-transform: capitalize;
+}
+
+.header-container {
+  width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .main-logo {
@@ -23,15 +30,7 @@
 
 .nav {
   align-items: center;
-  flex: 3;
-}
-
-.menubar {
-  justify-content: flex-start;
-  color: white;
-  font-size: 25px;
-  flex: 3;
-  visibility: hidden;
+  flex: 5;
 }
 
 .main-logo img {
@@ -47,6 +46,7 @@
   font-weight: normal;
   font-family: "Anton", sans-serif;
   margin: auto 30px;
+  padding: 15px 0;
 }
 
 .eliteserien {
@@ -61,29 +61,22 @@
   text-decoration: none;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
   .header {
     margin-bottom: 5px;
   }
   .header img {
     height: 30px;
   }
-
-  .arrow,
-  .nav {
-    visibility: hidden;
-  }
-
   .header-text-1,
   .header-text-2,
   .eliteserien {
-    font-size: 5px;
+    font-size: 12px;
     margin: 5px;
+    padding: 0px;
   }
-
-  .menubar {
-    visibility: visible;
-    justify-content: flex-end;
-    margin-right: 20px;
+  .eliteserien {
+    padding: 5px 5px;
+    margin-left: 7px;
   }
 }

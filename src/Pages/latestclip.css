@@ -5,13 +5,15 @@
 }
 
 .latest-clip {
-  width: 100vw;
+  margin: 0 auto;
   margin-top: 10px;
-  height: 420px;
+  height: 470px;
   text-align: center;
   display: flex;
   position: relative;
   overflow: hidden;
+  width: 100vw;
+  max-width: 1440px;
 }
 
 article {
@@ -54,15 +56,16 @@ article {
 
 .black-box {
   width: 25vw;
+  max-width: 360px;
 }
 
 .clip-bg {
   background-color: black;
-  /* background-color: #00081c; */
 }
 
 .clip-img {
   width: 75vw;
+  max-width: 1080px;
 }
 
 .clip-info {
@@ -85,7 +88,7 @@ article {
   margin: 0 3px;
 }
 
-.ci-detail {
+.ci-scorer-detail {
   margin-top: 5px;
   margin-right: 10px;
   font-size: 20px;
@@ -93,12 +96,12 @@ article {
 }
 
 .ci-result,
-.ci-detail,
+.ci-scorer-detail,
 .watch-btn {
   margin-left: 20px;
 }
 
-.watch-btn a {
+.buttons a {
   text-align: center;
   width: 100px;
   padding: 5px;
@@ -133,6 +136,10 @@ article {
   text-decoration: none;
 }
 
+.ci-detail {
+  margin-right: 3px;
+}
+
 .activeSlide {
   opacity: 1;
   transform: translateX(0);
@@ -144,30 +151,47 @@ article {
   transform: translateX(100%);
 }
 
-.watch-btn a:hover {
-  background: white;
-  color: black;
-}
-
+/*=========== 
+Hover Effect
+=============*/
+.watch-btn a:hover,
 .prev:hover,
 .next:hover {
   background-color: white;
   color: black;
 }
 
-@media screen and (max-width: 900px) {
+/*=========== 
+Mobile Version
+=============*/
+@media screen and (max-width: 1024px) {
   .latest-clip {
-    height: 350px;
-    margin-top: 5px;
+    height: 400px;
+    margin-top: 0px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .latest-clip {
-    height: 300px;
+    height: 350px;
   }
-  .black-box {
-    width: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .latest-clip {
+    height: 520px;
+  }
+  .single-clip {
+    display: block;
+  }
+  .ci-info {
+    display: block;
+    width: 100vw;
+    background: black;
+  }
+  .buttons,
+  .ci-scorer-detail {
+    display: flex;
   }
   .clip-img,
   .clip-info {
@@ -183,18 +207,23 @@ article {
   }
 
   .ci-detail {
+    width: auto;
     margin-top: 3px;
-    margin-right: 10px;
     font-size: 20px;
     text-align: left;
+    /* border: 1px solid red; */
   }
 
   .ci-result,
-  .ci-detail,
-  .watch-btn,
-  .prev,
-  .next {
+  .ci-scorer-detail,
+  .buttons {
     margin-left: 10px;
+  }
+  .watch-btn {
+    margin: 0;
+  }
+  .buttons a {
+    margin: 10px 50px 10px 3px;
   }
   .btn-container {
     margin-left: 0px;
@@ -203,31 +232,21 @@ article {
 
 @media screen and (max-width: 600px) {
   .latest-clip {
-    height: 170px;
-  }
-  .ci-logo {
-    width: 17px;
-    margin: 2px;
-  }
-  .ci-score {
-    font-size: 12px;
-    margin: 0 3px;
+    height: 400px;
   }
 
   .ci-detail {
-    margin-top: 3px;
-    margin-right: 2px;
-    font-size: 15px;
-    text-align: left;
+    font-size: 12px;
   }
-  .watch-btn a {
-    margin: 15px 0;
-    width: 50px;
-    font-size: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .latest-clip {
+    height: 320px;
   }
+  .watch-btn a,
   .prev,
   .next {
     font-size: 10px;
-    margin: 0 10px;
   }
 }

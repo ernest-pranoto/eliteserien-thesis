@@ -6,6 +6,9 @@
 
 .main-timeline {
   margin-top: 10px;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: rgb(220, 220, 220);
 }
 
 .center-line {
@@ -26,9 +29,9 @@
   display: flex;
   align-items: center;
   height: 50px;
-  width: calc(50% - 140px);
+  width: calc(50% - 100px);
   justify-content: space-between;
-  margin: 12px 0px 12px 120px;
+  margin: 12px 0px 12px 80px;
   padding: 5px 0;
   background-color: white;
   border: 1px solid rgb(154, 154, 158);
@@ -51,6 +54,7 @@
   align-items: center;
   justify-content: center;
   background: white;
+  color: black;
   border: 1px solid rgb(83, 83, 83);
   border-radius: 50%;
   right: -36px;
@@ -137,34 +141,47 @@
   margin: 0 10px;
 }
 
-/* hover effects */
-.timeline-home a:hover,
-.timeline-away a:hover,
-.home-goal a:hover,
-.away-goal a:hover {
+/*=========== 
+hover effect
+=============*/
+.timeline a:hover,
+.timeline a:hover > .timeline-content > .event-name {
+  color: white;
   background: var(--bright-blue);
 }
 
-.timeline-home a:hover > .timeline-content > .event-name,
-.timeline-home a:hover > .timeline-content > .event-player-name,
-.timeline-away a:hover > .timeline-content > .event-name,
-.timeline-away a:hover > .timeline-content > .event-player-name,
-.home-goal a:hover > .timeline-content > .event-player-name,
-.home-goal a:hover > .timeline-content > .event-name,
-.away-goal a:hover > .timeline-content > .event-player-name,
-.away-goal a:hover > .timeline-content > .event-name {
-  color: white;
-}
-
-.timeline-home a:hover .far,
-.timeline-away a:hover .far,
-.home-goal a:hover .far,
-.away-goal a:hover .far {
+.timeline a:hover .far {
   visibility: visible;
 }
 
-/* mobile version */
-@media screen and (max-width: 720px) {
+/*============
+mobile version
+==============*/
+@media screen and (max-width: 1024px) {
+  .far {
+    visibility: hidden;
+  }
+
+  .timeline-home a:hover > .far,
+  .timeline-away a:hover > .far {
+    /* visibility: hidden; */
+    transform: translateX(-20px);
+  }
+  .timeline-home a,
+  .timeline-away a,
+  .home-goal a,
+  .away-goal a {
+    width: calc(50% - 60px);
+    margin: 12px 80px 12px 40px;
+  }
+  .timeline-away a,
+  .away-goal a {
+    left: 50%;
+    margin: 15px 40px 15px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .center-line {
     height: 138%;
     left: -30px;
@@ -191,7 +208,7 @@
   .timeline-content {
     text-align: left;
     height: auto;
-    width: 250px;
+    width: 80%;
   }
 
   .timeline-home .timeline-content,
@@ -204,16 +221,6 @@
   .home-goal .action {
     position: absolute;
     transform: translateX(0%);
-  }
-
-  .timeline-home .timeline-club-logo .home-logo .timeline-club-logo {
-    position: inherit;
-    transform: translateX(0%);
-  }
-
-  .timeline-home:hover .far,
-  .timeline-away:hover .far {
-    visibility: hidden;
   }
 
   .timeline-away a,
@@ -243,10 +250,6 @@
   .home-goal .action,
   .away-goal .action {
     margin-left: -5px;
-  }
-
-  .far {
-    visibility: hidden;
   }
 
   .home a:before,

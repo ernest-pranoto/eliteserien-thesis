@@ -6,6 +6,7 @@ import { FiMenu } from 'react-icons/fi';
 function Header() {
     return (
         <div className="header">
+            <div className="header-container">
             <div className="main-logo">
                 <Link to="/"><img src='eliteserienlogo.png' alt="eliteserien logo" aria-label="home"/></Link>
             </div>
@@ -18,7 +19,7 @@ function Header() {
                 </Link>
                 <a href="https://www.eliteserien.no/" target="_blank" className="eliteserien">eliteserien.no</a>
             </nav>
-            <div className="menubar"><FiMenu/></div>
+            </div>
         </div>
     )
 }

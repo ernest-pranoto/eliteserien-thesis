@@ -7,17 +7,17 @@ import { MdDateRange } from "react-icons/md";
 
 function Kamper() {
     return (
-        <div>
+        <div className="kamper-container">
             <div className="season">
             <p>sesong :</p>
             <div>
-                    <div className="calendar">
+                    <div className="calendar" tabIndex="0">
                         <MdDateRange className="calendar-icon"/>
                         <p>2020</p>
                     </div>
                 </div>
             </div>
-            <div className="round">Runde 30</div>
+            <div className="round" tabIndex="0">Runde 30</div>
             {MatchData.map((singleMatch) => {
                 return <MatchList key={singleMatch.id} {...singleMatch}></MatchList>;
             })};
@@ -26,7 +26,7 @@ function Kamper() {
 };
 
 const MatchList = (list) => {
-    const {id, date, time, home, away, homeLogo, awayLogo, homeScore, awayScore, stadium} = list;
+    const {date, time, home, away, homeLogo, awayLogo, homeScore, awayScore, stadium} = list;
     return (
         <div className="container">
         <Link to="/result" aria-label={`${date} klokka ${time} ${home} ${homeScore} mot ${away} ${awayScore} på ${stadium}`}>

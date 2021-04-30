@@ -28,7 +28,7 @@ const SingleResult = (result) => {
   
   return (
     <div className="result" key={id}>
-      <div className="date-place">
+      <div className="date-place" tabIndex="0">
         <p>{stadium}</p>
         <MdDateRange className="date-time-icon-result"/>
         <p>{date}</p>
@@ -37,26 +37,26 @@ const SingleResult = (result) => {
       </div>
       <div className="transparent"></div>
       <div className="scoreboard-result">
-        <div className="home-result">
+        <div className="home-result" tabIndex="0">
           <img src={homelogo} alt={`${home} logo`} className="club-logo"/>
           <p>{home}</p>
         </div>
-        <div className="score">{homegoal} - {awaygoal}</div>
-        <div className="away-result">
-          <div className="away-result-plus">
+        <div className="score" tabIndex="0">{homegoal} - {awaygoal}</div>
+        <div className="away-result" tabIndex="0">
+          <div className="away-result-plus" >
             <p>{away}</p>
             <img src={awaylogo} alt={`${away} logo`} className="club-logo" />
           </div>
         </div>
       </div>
       <div className="scorer">
-        <div className="home-scorer">
+        <div className="home-scorer" tabIndex="0">
           <p>{homescorer1}</p>
           <p>{homescorer2}</p>
           <p>{homescorer3}</p>
         </div>
-        <div className="half-time">(HT: {halftime})</div>
-        <div className="away-scorer"></div>
+        <div className="half-time" tabIndex="0">(HT: {halftime})</div>
+        <div className="away-scorer" tabIndex="0"></div>
       </div>
     </div>
   );
